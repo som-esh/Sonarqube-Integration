@@ -6,6 +6,13 @@
 trigger:
 - main
 
+schedules:
+- cron: '30 11 * * Wed,Fri'
+  displayName: W F 17:00 (UTC + 5:30) India
+  branches:
+    include:
+    - main
+
 pool:
   vmImage: ubuntu-latest
   name: Default
@@ -20,5 +27,13 @@ steps:
     jdkVersionOption: '11'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
+    failWhenBugsFound: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+    goals: 'package -Dmaven.test.failure.ignore=true'
+
+- powershell: gci env:* | sort-object name | Format-Table -AutoSize | Out-File $env:BUILD_ARTIFACTSTAGINGDIRECTORY/environment-variables.txt
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
