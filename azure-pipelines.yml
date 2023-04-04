@@ -29,7 +29,7 @@ steps:
     publishJUnitResults: true
     failWhenBugsFound: false
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package -Dmaven.test.failure.ignore=true'
+    goals: 'package'
 
 - powershell: gci env:* | sort-object name | Format-Table -AutoSize | Out-File $env:BUILD_ARTIFACTSTAGINGDIRECTORY/environment-variables.txt
 
