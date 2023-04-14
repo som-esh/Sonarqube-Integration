@@ -5,6 +5,13 @@
   <artifactId>WebCalculator</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
+	<distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>centos-snapshots</name>
+        <url>http://192.168.56.105:8082/artifactory/savourt</url>
+    </snapshotRepository>
+</distributionManagement>
   <name>WebCalculator Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
