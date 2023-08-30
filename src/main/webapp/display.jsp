@@ -14,7 +14,7 @@
 		<div class="row">
 			<div>
 				<h1>Calculator</h1>
-				<h2>This is development Environment</h2>
+				<h2>This is Production Environment</h2>
 			</div>
 
 			<div>
