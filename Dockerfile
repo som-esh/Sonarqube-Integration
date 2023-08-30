@@ -1,4 +1,4 @@
-FROM fabric8/tomcat-7:latest
-EXPOSE 8080
-ADD http://docker:'Te$t1234'@http://192.168.56.103:8082/artifactory/assignment-snapshot /usr/local/tomcat/webapps/
+FROM tomcat:jdk17
+EXPOSE 8080 
+ADD http://192.168.56.103:8082/artifactory/assignment-snapshot/com/ss/WebCalculator/0.0.1-SNAPSHOT/WebCalculator-[RELEASE].war /usr/local/tomcat/webapps/
 CMD ["catalina.sh", "run"]
