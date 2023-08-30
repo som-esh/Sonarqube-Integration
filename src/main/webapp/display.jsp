@@ -13,8 +13,7 @@
 	<div class="container">
 		<div class="row">
 			<div>
-				<h1>Calculator</h1>
-				<h2>Development Environment</h2>
+				<h1>Calculator (Development Environment)</h1>
 			</div>
 
 			<div>
