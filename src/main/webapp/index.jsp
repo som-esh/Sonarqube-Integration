@@ -37,7 +37,8 @@
         <div class="container">
             <div class="row">
                 <div>
-                    <h1>Calculator (Development Environment)</h1>
+                    <h1>Calculator</h1>
+		    <h4>(Development Environment)</h4>
                 </div>
                 <form action="add" name="myform" id="myform">
                     <div>
